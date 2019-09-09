@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        app:cardElevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/titleAndDate"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/titleanddate"
+            app:layout_constraintStart_toStart="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/articleImage"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/androidImageForNews"
+        />
+
+
+        <TextView
+                android:id="@+id/shortDetailTitle"
+                android:textSize="18sp"
+                android:text="@string/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/articleImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"/>
+        <com.github.curioustechizen.ago.RelativeTimeTextView
+                android:id="@+id/shortDetailDate"
+                android:text="@string/date"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/shortDetailTitle"
+                app:layout_constraintStart_toEndOf="@id/articleImage"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                android:id="@+id/shortDetailDescription"
+                android:textSize="18sp"
+                android:text="@string/shortDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/shortDetailDate"
+                app:layout_constraintStart_toEndOf="@id/articleImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp"
+
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
